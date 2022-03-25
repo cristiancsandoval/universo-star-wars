@@ -9,11 +9,10 @@ const AppRouter = () => {
 
     const [data, setData] = useState([]);
     const endpoint = 'https://swapi.dev/api/films/';
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     const getData = async() =>{
         
-        setLoading(true);
         const api = await fetch(endpoint);
         const results = (await api.json()).results;
         setData(results);
@@ -39,9 +38,9 @@ const AppRouter = () => {
     <BrowserRouter>
         <Header/>
         <Routes>
-            <Route path='*' element={<Films/>} />
-            <Route path='/starships' element={<Starships/>} />
-            <Route path='/vehicles' element={<Vehicles/>} />
+            <Route path='*' element={<Films data={data} />} />
+            <Route path='/starships' element={<Starships data={data} />} />
+            <Route path='/vehicles' element={<Vehicles data={data} />} />
         </Routes>
     </BrowserRouter>
   )

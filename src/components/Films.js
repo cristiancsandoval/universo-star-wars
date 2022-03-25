@@ -1,8 +1,21 @@
 import React from 'react'
 
-const Films = () => {
+const Films = ({data}) => {
+
+    console.log(data);
+
   return (
-    <div>Films</div>
+    <main>
+        {
+            data.map((dat)=>(
+                <div key={dat.episode_id}>
+                    <h3>{dat.title}</h3>
+                    <p><span>Director: </span>{dat.director}</p>
+                    <p><span>Lanzamiento: </span>{dat.release_date}</p>
+                </div>
+            ))
+        }
+    </main>
   )
 }
 
