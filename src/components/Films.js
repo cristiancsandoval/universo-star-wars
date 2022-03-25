@@ -1,4 +1,5 @@
 import React from 'react'
+import Character from './Character';
 
 const Films = ({data}) => {
 
@@ -12,6 +13,11 @@ const Films = ({data}) => {
                     <h3>{dat.title}</h3>
                     <p><span>Director: </span>{dat.director}</p>
                     <p><span>Lanzamiento: </span>{dat.release_date}</p>
+                    {
+                        dat.characters.map((char, index)=>(
+                            <Character key={index} endpoint={char}/>
+                        ))
+                    }
                 </div>
             ))
         }

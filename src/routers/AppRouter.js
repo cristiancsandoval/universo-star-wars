@@ -22,7 +22,7 @@ const AppRouter = () => {
 
     useEffect(()=>{
 
-        getData()
+        getData();
 
     }, [])
 
