@@ -5,17 +5,21 @@ const Films = ({data}) => {
 
   return (
     <main>
+        <h2>Películas (Films)</h2>
         {
             data.map((dat)=>(
                 <div key={dat.episode_id}>
                     <h3>{dat.title}</h3>
                     <p><span>Director: </span>{dat.director}</p>
                     <p><span>Lanzamiento: </span>{dat.release_date}</p>
-                    {
-                        dat.characters.map((char, index)=>(
-                            <Character key={index} endpoint={char}/>
-                        ))
-                    }
+                    <p><span>Personajes: </span></p>
+                    <div>
+                        {
+                            dat.characters.map((char, index)=>(
+                                <Character key={index} endpoint={char}/>
+                            ))
+                        }
+                    </div>
                 </div>
             ))
         }
