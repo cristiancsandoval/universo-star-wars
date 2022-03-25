@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
+import Modal from './Modal';
 
 const Character = ({endpoint}) => {
 
     const [data, setData] = useState({});
+    const [showModal, setShowModal] = useState(false);
 
     const getData = async() =>{
         
@@ -20,7 +22,8 @@ const Character = ({endpoint}) => {
 
   return (
     <div>
-        <h5>{data.name}</h5>
+        <h5 onClick={()=>setShowModal(true)}> {data.name} </h5>
+        <Modal data={data} state={[showModal, setShowModal]}/>
     </div>
   )
 }
