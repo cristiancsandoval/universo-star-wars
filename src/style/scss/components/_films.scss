@@ -1,0 +1,52 @@
+@import '../base/variables';
+
+main.films{
+    >div{
+        width: 100%;
+        padding: 15px;
+        margin: 10px 0;
+        background-color: $black;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        h3{
+            margin: 10px 0;
+            padding: 10px 0;
+            width: 100%;
+            text-align: left;
+            border-bottom: solid 1px $grey;
+        }
+        p{
+            margin: 5px 0;
+            span{
+                font-weight: 600;
+            }
+        }
+        >div{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            width: 100%;
+            border-bottom: solid 1px $grey;
+            >div{
+                margin: 5px;
+                border: solid 1px $grey;
+                border-radius: 8px;
+                h5{
+                    width: 100%;
+                    height: 100%;
+                    padding: 10px;
+                    font-weight: 400;
+                    cursor: pointer;
+                }
+                &:hover{
+                    color: $yellow;
+                    border-color: $yellow;
+                }
+            }
+        }
+    }
+}

@@ -4,7 +4,7 @@ import Character from './Character';
 const Films = ({data}) => {
 
   return (
-    <main>
+    <main className='films'>
         <h2>Películas (Films)</h2>
         {
             data.map((dat)=>(

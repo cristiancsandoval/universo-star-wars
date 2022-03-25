@@ -7,22 +7,161 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   color: #EEEEEE;
-  background-color: #222831;
+  background-color: #393E46;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+main h2 {
+  width: 100%;
+  text-align: left;
+  margin: 15px 10px;
 }
 
 .d-none {
   display: none;
 }
 
-.modal {
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #222831;
+}
+header nav, header div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+}
+header nav h1, header div h1 {
+  color: #FFD369;
+  font-size: 25px;
+}
+header nav a, header div a {
+  color: #EEEEEE;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 18px;
+}
+header nav a:hover, header div a:hover {
+  color: #FFD369;
+}
+
+main.films > div {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #222831;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+main.films > div h3 {
+  margin: 10px 0;
+  padding: 10px 0;
+  width: 100%;
+  text-align: left;
+  border-bottom: solid 1px #393E46;
+}
+main.films > div p {
+  margin: 5px 0;
+}
+main.films > div p span {
+  font-weight: 600;
+}
+main.films > div > div {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  border-bottom: solid 1px #393E46;
+}
+main.films > div > div > div {
+  margin: 5px;
+  border: solid 1px #393E46;
+  border-radius: 8px;
+}
+main.films > div > div > div h5 {
   width: 100%;
   height: 100%;
-  min-height: 100vh;
+  padding: 10px;
+  font-weight: 400;
+  cursor: pointer;
+}
+main.films > div > div > div:hover {
+  color: #FFD369;
+  border-color: #FFD369;
+}
+
+.modal {
+  width: 100%;
+  height: 100vh;
   position: fixed;
   top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(2px);
+}
+.modal > div {
+  background-color: #222831;
+  width: 90%;
+  max-width: 500px;
+  border: solid 1px #393E46;
+  border-radius: 10px;
+  padding: 20px;
+  color: #EEEEEE;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.modal > div > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 8px 0;
+  border-bottom: solid 1px #393E46;
+}
+.modal > div > div h4 {
+  flex-grow: 1;
+  color: #FFD369;
+}
+.modal > div > div button {
+  border: none;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 50%;
+}
+.modal > div > div button img {
+  width: 25px;
+}
+.modal > div > div button:hover {
+  background-color: #393E46;
 }
 
 /*# sourceMappingURL=index.css.map */
