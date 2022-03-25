@@ -49,6 +49,7 @@ header nav, header div {
 header nav h1, header div h1 {
   color: #FFD369;
   font-size: 25px;
+  text-transform: uppercase;
 }
 header nav a, header div a {
   color: #EEEEEE;
@@ -145,6 +146,7 @@ main.films > div > div > div:hover {
 }
 .modal > div > div h4 {
   flex-grow: 1;
+  font-size: 18px;
   color: #FFD369;
 }
 .modal > div > div button {

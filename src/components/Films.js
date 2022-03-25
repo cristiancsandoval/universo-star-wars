@@ -1,7 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { getData } from '../data/getData';
 import Character from './Character';
 
-const Films = ({data}) => {
+const Films = () => {
+
+    const [data, setData] = useState([]);
+    const endpoint = 'https://swapi.dev/api/films/';
+    const [loading, setLoading] = useState(true);
+
+    useEffect(()=>{
+
+        getData(endpoint, setData, setLoading);
+
+    }, [])
+
+    if(loading){
+        return(
+            <div>
+                <h3>Cargando información...</h3>
+            </div>
+        )
+    }
 
   return (
     <main className='films'>
