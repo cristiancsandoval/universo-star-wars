@@ -13,20 +13,6 @@ body {
   background-color: #393E46;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 20px;
-}
-main h2 {
-  width: 100%;
-  text-align: left;
-  margin: 15px 10px;
-}
-
 .d-none {
   display: none;
 }
@@ -59,6 +45,53 @@ header nav a, header div a {
 }
 header nav a:hover, header div a:hover {
   color: #FFD369;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+main h2 {
+  width: 100%;
+  text-align: left;
+  margin: 15px 10px;
+}
+main .cards-cntr {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+main .cards-cntr > div {
+  width: 90%;
+  max-width: 300px;
+  margin: 7px;
+  background-color: #222831;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+main .cards-cntr > div h3 {
+  width: 100%;
+  margin: 5px 0;
+  padding: 5px 0;
+  text-align: left;
+  border-bottom: solid 1px #393E46;
+}
+main .cards-cntr > div p {
+  margin-top: 3px;
+}
+main .cards-cntr > div p span {
+  font-weight: 600;
 }
 
 main.films > div {
