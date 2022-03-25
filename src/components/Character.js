@@ -4,6 +4,7 @@ import Modal from './Modal';
 const Character = ({endpoint}) => {
 
     const [data, setData] = useState({});
+    const [cargando, setCargando] = useState(true);
     const [showModal, setShowModal] = useState(false);
 
     const getData = useCallback(async() =>{
@@ -11,6 +12,7 @@ const Character = ({endpoint}) => {
         const api = await fetch(endpoint);
         const results = await api.json();
         setData(results);
+        setCargando(false);
 
     }, [endpoint])
 
@@ -19,6 +21,10 @@ const Character = ({endpoint}) => {
         getData();
 
     }, [getData])
+
+    if(cargando){
+      return <></>
+    }
 
   return (
     <div>

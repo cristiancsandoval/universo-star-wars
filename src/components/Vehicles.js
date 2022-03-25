@@ -24,11 +24,14 @@ const Vehicles = () => {
   return (
     <main>
       <h2>Vehicles</h2>
-      <div>
+      <div className='cards-cntr'>
         {
           data.map((dat, index)=>(
             <div key={index}>
-
+                <h3>{dat.name}</h3>
+                <p><span>Modelo: </span>{dat.model}</p>
+                <p><span>Fabricante: </span>{dat.manufacturer}</p>
+                <p><span>Pasajeros: </span>{dat.passengers}</p>
             </div>
           ))
         }
