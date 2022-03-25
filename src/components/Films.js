@@ -3,8 +3,6 @@ import Character from './Character';
 
 const Films = ({data}) => {
 
-    console.log(data);
-
   return (
     <main>
         {
