@@ -15,8 +15,8 @@ const Starships = () => {
 
   if(loading){
       return(
-          <div>
-              <h3>Cargando información...</h3>
+          <div className='loader'>
+              <h3>Cargando starships...</h3>
           </div>
       )
   }

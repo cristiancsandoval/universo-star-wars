@@ -17,6 +17,32 @@ body {
   display: none;
 }
 
+.loader {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 400;
+}
+.loader::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  border: 5px solid #EEEEEE;
+  border-top: 5px solid #FFD369;
+  border-radius: 50%;
+  animation: girar 0.8s ease-in-out infinite;
+}
+
+@keyframes girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
 header {
   width: 100%;
   display: flex;
